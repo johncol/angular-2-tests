@@ -1,0 +1,19 @@
+angular 2 built-in components:
+--------------------------------------
+
+*ngIf="condition"
+[ngSwicth]="variable"
+*ngSwicthWhen="value_to_compare"
+*ngSwicthDefault
+
+[style.font-variant]="'small-caps'"
+[ngStyle]="{ 'font-variant': 'small-caps', color: #333 }"
+
+[class.some-class]="condition"
+[ngClass]="{'class-name-1': condition-1, 'class-name-2': condition-2 }"
+[ngClass]="['class-name-1', 'class-name-2']"
+
+*ngFor="let item of items; let i = index"
+
+ngNonBindable
+
