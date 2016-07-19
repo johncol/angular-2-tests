@@ -1,0 +1,20 @@
+.selected {
+	background-color: #FAFAFA !important;
+}
+
+.item.product {
+	width: 100%;
+}
+
+.image .product-image {
+	height: 150px !important;
+}
+
+.item.product {
+	position: relative !important;
+}
+.extra {
+	position: absolute !important;
+	left: 500px !important;
+	top: -10px !important;
+}
