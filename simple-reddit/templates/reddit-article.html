@@ -1,0 +1,11 @@
+<div class="content">
+	<div class="header">{{ article.title }}</div>
+	<div class="meta">{{ article.link }}</div>
+	<div class="description">{{ article.votes }} Points</div>
+</div>
+<div class="extra content">
+  <div class="ui two buttons">
+    <div class="ui basic green button" (click)="voteUp()">Vote Up!</div>
+    <div class="ui basic red button" (click)="voteDown()">Vote Down</div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+
+body {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+reddit-app {
+	max-width: 700px;
+}
+
+.card {
+	width: 100% !important;
+}
