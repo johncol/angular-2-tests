@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { Product } from './../models/product';
 import { ProductsListComponent } from './products-list.component';
+import { SimpleForm1Component } from './simple-form-1.component';
+import { SimpleForm2Component } from './simple-form-2.component';
 
 @Component({
 	selector: 'inventory-app',
-	directives: [ProductsListComponent],
+	directives: [ProductsListComponent, SimpleForm1Component, SimpleForm2Component],
 	host: { class: 'ui raised very padded text container segment'},
 	template: `
 		<div class="ui container">
@@ -12,6 +14,8 @@ import { ProductsListComponent } from './products-list.component';
 				[productList]="products"
 				(onProductSelected)=productWasSelected($event)>
 			</products-list>
+			<br />
+			<simple-form-2></simple-form-2>
 		</div>
 	`
 })

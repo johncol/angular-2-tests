@@ -27,4 +27,8 @@ export class RedditApp {
 	sortedArticles(): Article[] {
 		return this.articles.sort((a1, a2) => a2.votes - a1.votes);
 	}
+
+	printArticles(): void {
+		this.articles.forEach(a => console.log(a));
+	}
 }

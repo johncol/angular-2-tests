@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
 	selector: 'price-display',
 	inputs: ['price'],
-	host: { class: 'extra'}
+	host: { class: 'extra'},
 	template: `
 		<div class="price-display">{{price | currency:'COP':true}}</div>
 	`
