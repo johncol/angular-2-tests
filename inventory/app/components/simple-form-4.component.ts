@@ -51,11 +51,7 @@ export class SimpleForm4Component {
 				])]
 		});
 
-		this.myForm.valueChanges
-			.subscribe(newVal => console.log(" new form value: ", newVal));
-
-		this.myForm.controls['sku'].valueChanges
-			.subscribe(newVal => console.log(" new sku value: ", newVal));
+		this.myForm.valueChanges.subscribe(FormUtils.logNewValue);
 	}
 
 	onSubmit(form: any): void {
@@ -68,5 +64,11 @@ export class SimpleForm4Component {
 class CustomValidators {
 	static startWith123(control: Control): {[s: string]: boolean} {
 		return !control.value.match(/^123/) ? { 'startWith123': true } : null;
+	}
+}
+
+class FormUtils {
+	static logNewValue(form: any): void {
+		console.log('Form new value: ', form);
 	}
 }
