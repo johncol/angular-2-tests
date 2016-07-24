@@ -3,6 +3,9 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 import { SearchResult } from './../models/search-result';
 
+let YOUTUBE_API_KEY: string = '';
+let YOUTUBE_API_URL: string = 'https://www.googleapis.com/youtube/v3/search';
+
 @Injectable()
 export class YoutubeService {
 	constructor(private http: Http, 
@@ -35,9 +38,6 @@ export class YoutubeService {
 		return `${this.apiUrl}&${params}`;
 	}
 }
-
-let YOUTUBE_API_KEY: string = '';
-let YOUTUBE_API_URL: string = 'https://www.googleapis.com/youtube/v3/search';
 
 export var youtubeServiceInjectables: Array<any> = [
 	bind(YoutubeService).toClass(YoutubeService),

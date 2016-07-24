@@ -1,0 +1,13 @@
+body {
+	max-width: 900px;
+	margin: 30px auto;
+	color: #333;
+	font-family: 'Trebuchet MS', sans-serif;
+}
+
+h1 { color: #ff5722; }
+a, a:link, a:visited { color: #03a9f4; }
+.main-content h1 { color: #00bcd4; }
+label, input, .form-error { display: block; }
+.form-error { color: #900; }
+a.logout { cursor: pointer; }
