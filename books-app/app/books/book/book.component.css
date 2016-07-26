@@ -1,0 +1,16 @@
+.book {
+    margin: 10px 30px;
+    padding: 30px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    max-width: 500px;
+}
+
+h1 { 
+    font-weight: normal;
+    margin: 0; 
+}
+
+p {
+    margin: 0;
+}
