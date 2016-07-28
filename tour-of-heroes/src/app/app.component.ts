@@ -1,31 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 
-import { Hero } from './hero.model';
-import { HeroService } from './hero.service';
+import { DashboardComponent } from './dashboard.component';
 import { HeroDetailComponent } from './hero-detail.component';
+import { HeroesComponent} from './heroes.component';
+import { HeroService } from './hero.service';
 
 @Component({
     moduleId: module.id,
-    directives: [HeroDetailComponent],
     providers: [HeroService],
+    directives: [ROUTER_DIRECTIVES],
+    precompile: [HeroDetailComponent, HeroesComponent, DashboardComponent],
     selector: 'tour-of-heroes',
-    templateUrl: 'app.component.html',
+    templateUrl : 'app.component.html',
     styleUrls: ['app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
     title: string = 'Tour of Heroes';
-    heroes: Hero[];
-    selectedHero: Hero;
-
-    constructor(private service: HeroService) {}
-
-    ngOnInit(): void {
-        this.service.getHeroesSlowly()
-            .then(heroes => this.heroes = heroes)
-            .catch(error => this.heroes = []);
-    }
-
-    onSelect(hero: Hero) {
-        this.selectedHero = hero;
-    }
 }
